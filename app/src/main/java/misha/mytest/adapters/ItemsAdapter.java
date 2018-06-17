@@ -2,6 +2,7 @@ package misha.mytest.adapters;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,6 +47,10 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemHolder> 
                 holder.itemView.setBackgroundColor(Color.YELLOW);
             } else if (level > 50) {// great item!
                 holder.itemView.setBackgroundColor(Color.GREEN);
+            }
+
+            if(item.isIdentified()){
+                holder.tvFullName.setTypeface(null, Typeface.BOLD);
             }
         }
 
